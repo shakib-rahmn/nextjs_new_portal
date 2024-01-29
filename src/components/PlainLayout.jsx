@@ -4,8 +4,9 @@ import {cookies} from "next/headers";
 import Navbar from './Navbar';
 
 async function getData(){
-    let categories= (await (await fetch(`${process.env.HOST}/api/category`)).json())['data']
-    return {categories:categories}
+    let categories = (await (await fetch(`${process.env.HOST}/api/category`)).json())['data']
+    let socials = (await (await fetch(`${process.env.HOST}/api/social`)).json())['data']
+    return {categories:categories, socials: socials}
 }
 
 const PlainLayout = async (props) => {
