@@ -3,8 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Navbar = (props) => {
-  console.log(props);
+const Navbar = ({ isLogin, data }) => {
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -59,20 +58,18 @@ const Navbar = (props) => {
                 Home
               </a>
             </li>
-            <Link className="nav-link f-13" href="/">
-              Home
-            </Link>
-            {/* {data["categories"].map((item, i) => {
+            {data["categories"].map((item, i) => {
               return (
-                <Link
-                  key={i}
-                  className="nav-link f-13"
-                  href={`/category?id=${item["id"]}`}
-                >
-                  {item["name"]}
-                </Link>
+                <li key={i}>
+                  <Link
+                    className="nav-link f-13"
+                    href={`/category?id=${item["id"]}`}
+                  >
+                    {item["name"]}
+                  </Link>
+                </li>
               );
-            })} */}
+            })}
           </ul>
         </div>
       </div>
