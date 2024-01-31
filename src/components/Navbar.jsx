@@ -9,7 +9,7 @@ const Navbar = ({ isLogin, data }) => {
   let [keyword, SetKeyword] = useState("");
   return (
     <>
-      <div className="px-4 py-4 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
+      <div className="px-4 py-4 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between fixed top-0 w-full">
         <div className="max-w-screen-xl flex ms-auto space-x-3 rtl:space-x-reverse">
           <a
             href={data.socials[0]["facebook"]}
@@ -158,7 +158,7 @@ const Navbar = ({ isLogin, data }) => {
                   className="block w-full p-2 ps-3 me-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Search..."
                 />
-                <Link href={keyword===""?("/"):(`/search?keyword=${keyword}`)} class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Search</Link>
+                <Link href={keyword===""?("/"):(`/search?keyword=${keyword}`)} className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Search</Link>
               </div>
             </div>
           </div>
